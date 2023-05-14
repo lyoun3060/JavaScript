@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    var count = 0;
+
+    myFnc();  
+<!-- ㄴ> 바로 밑에서 함수선언했지만, 함수선언보다 위에서 함수사용했을때에도 -->
+<!--     함수사용 가능하다 = 호이스팅 기법 -->
+    function myFnc(){
+        count++
+        document.write("hello"+ count. "<br>")
+    }
+
+    myFnc();
+
+    var theFnc = function(){
+        count++
+        document.write("bye"+ count, "<br>");
+    }
+
+    theFnc();
+</head>
+<body>
+    
+</body>
+</html>
