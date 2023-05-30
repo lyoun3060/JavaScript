@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js">
+        $(function(){
+            var arr1 = [{"area":"서울", "name:김수장"},{"area":"부산", "name:김장"},{"area":"제주도", "name:김수"},]
+
+            var arr2 = $.map(arr1, function(a,b){
+                if(a.area == "서울"){
+                    return a
+                }
+            }) 
+            console.log(arr2)
+            document.write(arr2[0]+"<br>"+arr2[1]+"<br>"+arr2[2])
+            console.log("============end========")
+
+            var arr3 = $.grep(arr1, function(a,b){
+                if(a.area == "서울"){
+                    return true
+                }else{
+                    return false
+                }
+            })
+            console.log(arr3)
+            document.write(arr3[0]+"<br>"+arr3[1]+"<br>"+arr3[2])
+            console.log("============second end========")
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
